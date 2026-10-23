@@ -57,7 +57,6 @@ The switch connects five Administration PCs to VLAN 10 and five IT PCs to VLAN 2
 | PC9    | 192.168.20.24 |
 | PC10   | 192.168.20.25 |
 
-**Note:** Confirm the actual default gateway addresses against the router configuration before documenting them as verified.
 
 ## Technologies and Concepts
 
@@ -87,7 +86,6 @@ Verification evidence is stored in the `evidence/` folder.
 
 The project verification process includes checking VLAN membership, trunk status, interface status, routing information, DHCP operation where configured, and end to end connectivity.
 
-Actual results should be reviewed before claiming that every feature works as intended.
 
 ## Skills Demonstrated
 
