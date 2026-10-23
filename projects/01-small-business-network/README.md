@@ -1,56 +1,113 @@
-**JossiTech Small Business Network**
+# JossiTech Small Business Network
 
-**Project Overview**
+## Project Overview
 
-This project involves designing, configuring, and testing a simulated small business network using Cisco Packet Tracer.
+This project demonstrates the design, configuration, and verification of a small business network using Cisco Packet Tracer.
 
-The network is designed to separate the Administration and IT departments using VLANs while providing controlled communication between the two networks.
+The network serves two departments, Administration and IT. It uses VLANs to separate departmental traffic and a router on a stick configuration to support inter VLAN routing.
 
-**Project Objectives**
-1. Configure VLANs for departmental network segmentation.
-2. Configure trunk links between appropriate network devices.
-3. Implement inter VLAN routing.
-4. Configure DHCP for automatic IP address assignment.
-5. Configure routing and NAT/PAT where required.
-6. Apply Access Control Lists to control network traffic.
-7. Configure SSH for secure remote device management.
-8. Test connectivity and troubleshoot network issues.
-   
-**Technologies and Tools**
+## Project Objectives
 
-• Cisco Packet Tracer  
-• Cisco IOS command line  
-• VLANs and trunking  
-• Inter VLAN routing  
-• DHCP  
-• NAT/PAT  
-• Access Control Lists  
-• SSH
+1. Design a small business network topology.
+2. Configure VLANs for departmental separation.
+3. Assign IPv4 addresses to end devices.
+4. Configure router sub-interfaces for inter VLAN routing.
+5. Configure trunking between the switch and router.
+6. Test network connectivity and document the results.
+7. Practice network administration and troubleshooting.
 
-**Network Topology**
+## Network Topology
 
-The network topology diagram will be added here.
+The network contains two routers, one switch, and ten PCs.
 
-**Configuration Files**
+**Logical connection:**
 
-Router and switch configurations will be documented in this project.
+`ISP → R1 → SW1 → PCs`
 
-**Verification and Testing**
+The switch connects five Administration PCs to VLAN 10 and five IT PCs to VLAN 20.
 
-Verification commands, connectivity tests, and screenshots will be added as the configurations are documented and tested.
+**Topology diagram:** See the `topology/` folder for the network diagram.
 
-**Troubleshooting**
+## VLAN Configuration
 
-This section will document the problems encountered, diagnostic steps, root causes, corrective actions, and final results.
+| VLAN ID | Department     | Network         | Subnet Mask   |
+| ------- | -------------- | --------------- | ------------- |
+| 10      | Administration | 192.168.10.0/24 | 255.255.255.0 |
+| 20      | IT             | 192.168.20.0/24 | 255.255.255.0 |
 
-**Project Status**
+## IP Addressing
 
-Documentation and evidence collection in progress.
+### Administration: VLAN 10
 
-**Learning Outcomes**
+| Device | IP Address    |
+| ------ | ------------- |
+| PC1    | 192.168.10.21 |
+| PC2    | 192.168.10.22 |
+| PC3    | 192.168.10.23 |
+| PC4    | 192.168.10.24 |
+| PC5    | 192.168.10.25 |
 
-This project develops practical skills in network design, switching, routing, IP address management, network security, and troubleshooting.
+### IT: VLAN 20
 
-**Disclaimer**
+| Device | IP Address    |
+| ------ | ------------- |
+| PC6    | 192.168.20.21 |
+| PC7    | 192.168.20.22 |
+| PC8    | 192.168.20.23 |
+| PC9    | 192.168.20.24 |
+| PC10   | 192.168.20.25 |
 
-This is a simulated learning project. It does not represent a production network deployment.
+**Note:** Confirm the actual default gateway addresses against the router configuration before documenting them as verified.
+
+## Technologies and Concepts
+
+* Cisco Packet Tracer
+* IPv4 addressing and subnetting
+* Virtual LANs (VLANs)
+* IEEE 802.1Q trunking
+* Router on a stick
+* Inter VLAN routing
+* Network connectivity testing
+* SSH management, where configured
+* DHCP and NAT/PAT, where configured
+
+## Project Files
+
+| Folder            | Contents                                         |
+| ----------------- | ------------------------------------------------ |
+| `packet-tracer/`  | Packet Tracer network simulation                 |
+| `configurations/` | Device configuration files                       |
+| `topology/`       | Network topology diagram                         |
+| `evidence/`       | Screenshots of verification commands and tests   |
+| `documentation/`  | IP addressing table and supporting documentation |
+
+## Verification and Testing
+
+Verification evidence is stored in the `evidence/` folder.
+
+The project verification process includes checking VLAN membership, trunk status, interface status, routing information, DHCP operation where configured, and end to end connectivity.
+
+Actual results should be reviewed before claiming that every feature works as intended.
+
+## Skills Demonstrated
+
+* Network topology design
+* VLAN planning and segmentation
+* IPv4 addressing
+* Router and switch configuration
+* Inter VLAN routing
+* Network troubleshooting
+* Technical documentation
+* Configuration verification
+
+## Future Improvements
+
+Potential extensions include implementing and testing access control lists, documenting NAT/PAT behavior, strengthening secure device management, and expanding the topology with additional switches or departments.
+
+## Author
+
+JossiTech
+
+Network Engineering Portfolio
+
+**Build. Configure. Connect.**
